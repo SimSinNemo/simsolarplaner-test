@@ -1,19 +1,13 @@
-# SimSolarPlaner auf GitHub Pages
+# SimSolarPlaner GitHub-Testlink
 
-Diese GitHub-Pages-Seite zeigt die vollständige SimSolarPlaner-Webanwendung in einem eingebetteten Fenster. Die Oberfläche wird über GitHub Pages geladen; Suche, Dach- und Ertragsberechnung, Datenbank und PDF-Ausgabe laufen auf dem bestehenden SimSolarPlaner-App-Server.
-
-## GitHub-Pages-Adresse
+GitHub Pages leitet direkt zur vollständigen Anwendung weiter:
 
 https://simsinnemo.github.io/simsolarplaner-test/
 
-## Voraussetzungen und Grenzen
+Die App läuft auf ihrem eigenen Server, damit die GeoAdmin-Adresssuche, Dachflächensuche, PVGIS-Ertragsberechnung und PDF-Auswertung funktionieren. Eine reine GitHub-Pages-Einbettung kann diese API-Aufrufe wegen fehlender CORS-Freigabe nicht ausführen.
 
-- JavaScript und eine Internetverbindung sind erforderlich.
-- Die GitHub-Pages-Seite ist ein Einbettungsrahmen. Der vollständige Ablauf wird vom App-Server bereitgestellt.
-- Die Datenquellen sind GeoAdmin / swisstopo und PVGIS. Ergebnisse bleiben Planungsabschätzungen, keine Ausführungsplanung oder Ertragsgarantie.
-- Kontaktfreigabe und Versand sind im aktuellen Testbetrieb weiterhin eingeschränkt. Keine echten Personendaten eingeben.
-- Die Anwendung benötigt kein GPT.
+## Testbetrieb
 
-## Veröffentlichung
-
-GitHub Pages ist für den Branch `main` und den Repository-Stamm konfiguriert. Änderungen an `index.html` oder `styles.css` werden nach dem Push automatisch veröffentlicht.
+- Es werden nur synthetische Kontaktdaten akzeptiert; es wird keine Nachricht versendet.
+- Keine echten Kontakt- oder Personendaten eingeben.
+- Die GitHub-Pages-Adresse dient als Weiterleitung; die Anwendung selbst bleibt auf dem App-Server gehostet.
