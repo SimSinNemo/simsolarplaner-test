@@ -1,26 +1,19 @@
-# SimSolarPlaner GitHub-Testseite
+# SimSolarPlaner auf GitHub Pages
 
-Eigenständige, statische Demonstration für GitHub Pages. Sie benötigt weder GPT noch einen Server und verwendet nur illustrative Beispielwerte.
+Diese GitHub-Pages-Seite zeigt die vollständige SimSolarPlaner-Webanwendung in einem eingebetteten Fenster. Die Oberfläche wird über GitHub Pages geladen; Suche, Dach- und Ertragsberechnung, Datenbank und PDF-Ausgabe laufen auf dem bestehenden SimSolarPlaner-App-Server.
 
-## Lokal ansehen
+## GitHub-Pages-Adresse
 
-`index.html` im Browser öffnen.
+https://simsinnemo.github.io/simsolarplaner-test/
 
-## Auf GitHub Pages veröffentlichen
+## Voraussetzungen und Grenzen
 
-1. Ein GitHub-Repository erstellen und den Inhalt dieses Ordners hochladen.
-2. Im Repository **Settings → Pages** öffnen.
-3. Unter **Build and deployment** die Quelle **Deploy from a branch** wählen.
-4. Den Branch `main` und den Ordner `/ (root)` wählen und speichern.
-5. Die angezeigte Pages-Adresse öffnen.
+- JavaScript und eine Internetverbindung sind erforderlich.
+- Die GitHub-Pages-Seite ist ein Einbettungsrahmen. Der vollständige Ablauf wird vom App-Server bereitgestellt.
+- Die Datenquellen sind GeoAdmin / swisstopo und PVGIS. Ergebnisse bleiben Planungsabschätzungen, keine Ausführungsplanung oder Ertragsgarantie.
+- Kontaktfreigabe und Versand sind im aktuellen Testbetrieb weiterhin eingeschränkt. Keine echten Personendaten eingeben.
+- Die Anwendung benötigt kein GPT.
 
-Für ein Repository ohne eigene Domain lautet die Adresse üblicherweise `https://BENUTZERNAME.github.io/REPOSITORY/`.
+## Veröffentlichung
 
-## Inhalt
-
-- Interaktive Anpassung von Stromverbrauch und Modulanzahl
-- Beispielhafte Jahresproduktion, Eigenverbrauch, Autarkie und Wirtschaftlichkeit
-- Monatsdiagramm, schematische Modulbelegung und Energiefluss
-- Druckansicht, die sich im Browser als PDF speichern lässt
-
-Es gibt keine Live-Abfrage, keine Datenbank und keine Übermittlung persönlicher Angaben. Die Produktions-, Kosten- und Verbrauchswerte sind keine Offerte oder Ertragsprognose.
+GitHub Pages ist für den Branch `main` und den Repository-Stamm konfiguriert. Änderungen an `index.html` oder `styles.css` werden nach dem Push automatisch veröffentlicht.

@@ -4,50 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f3f6f5">
-  <meta name="description" content="Statische GitHub-Pages-Testseite des SimSolarPlaners mit interaktiver Beispielauswertung.">
-  <title>SimSolarPlaner | GitHub-Test</title>
+  <meta name="description" content="SimSolarPlaner - vollständige interaktive Solarpotenzial-Auswertung.">
+  <title>SimSolarPlaner | GitHub Pages</title>
   <link rel="stylesheet" href="./styles.css">
-  <script src="./app.js" defer></script>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#start" aria-label="SimSolarPlaner Startseite"><span class="brand-mark" aria-hidden="true">S</span><span>SimSolarPlaner</span></a>
-    <div class="topbar-meta"><span class="status-dot"></span> GitHub Pages · Testversion</div>
+    <a class="brand" href="./" aria-label="SimSolarPlaner Startseite"><span class="brand-mark" aria-hidden="true">S</span><span>SimSolarPlaner</span></a>
+    <div class="topbar-right"><span class="connection"><i></i> Live-Anwendung</span><a class="direct-link" href="https://simsolarplaner.workspace-vo-9782.chatgpt.site/" target="_blank" rel="noopener noreferrer">Direkt öffnen <span aria-hidden="true">↗</span></a></div>
   </header>
-  <main id="start" class="shell">
-    <section class="page-heading">
-      <div><p class="eyebrow">SOLARPOTENZIAL · MUSTERPROJEKT</p><h1>Deine Beispielauswertung</h1><p class="intro">Ein interaktiver Vorgeschmack mit frei veränderbaren Annahmen und transparenten Beispielwerten.</p></div>
-      <button class="print-button" type="button" id="print-report" title="Bericht drucken oder als PDF speichern"><span aria-hidden="true">↓</span> Bericht drucken</button>
-    </section>
-    <aside class="demo-notice" role="note"><span class="notice-icon" aria-hidden="true">i</span><p><strong>Statische Testseite.</strong> Es werden keine Adressen gesucht, keine Kontakte übertragen und keine echten Dach- oder Ertragsdaten abgefragt. Alle Ergebnisse sind illustrative Beispielwerte.</p></aside>
-    <div class="workspace">
-      <aside class="controls" aria-labelledby="inputs-title">
-        <div class="section-heading"><span class="section-index">01</span><div><h2 id="inputs-title">Annahmen</h2><p>Werte ändern, Ergebnis live vergleichen</p></div></div>
-        <div class="control-group"><label for="usage">Stromverbrauch Haushalt</label><div class="input-with-unit"><input id="usage" type="number" min="1500" max="18000" step="100" value="4500" inputmode="numeric"><span>kWh/Jahr</span></div><input class="range" id="usage-range" type="range" min="1500" max="18000" step="100" value="4500" aria-label="Jährlicher Stromverbrauch"><div class="range-labels"><span>1'500</span><span>18'000</span></div></div>
-        <div class="control-group"><label for="modules">Anzahl Solarmodule</label><div class="input-with-unit"><input id="modules" type="number" min="8" max="40" step="1" value="24" inputmode="numeric"><span>Module</span></div><input class="range" id="modules-range" type="range" min="8" max="40" step="1" value="24" aria-label="Anzahl Solarmodule"><div class="range-labels"><span>8</span><span>40</span></div></div>
-        <div class="assumption-list"><h3>Feste Beispielannahmen</h3><div><span>Modulleistung</span><strong>430 Wp</strong></div><div><span>Jahresertrag</span><strong>1'000 kWh/kWp</strong></div><div><span>Stromtarif</span><strong>CHF 0.30/kWh</strong></div><div><span>Einspeisetarif</span><strong>CHF 0.08/kWh</strong></div><div><span>Investition</span><strong>CHF 850/Modul + 4'000</strong></div></div>
-        <button class="reset-button" id="reset-values" type="button">Beispielwerte zurücksetzen</button>
-      </aside>
-      <section class="report" aria-labelledby="result-title" aria-live="polite">
-        <div class="report-head"><div><p class="eyebrow">PLANUNGSABSCHÄTZUNG</p><h2 id="result-title">Ergebnis im Überblick</h2></div><span class="sample-tag">BEISPIEL</span></div>
-        <div class="lead-result"><div><span>Geschätzte Jahresproduktion</span><strong id="annual-production">10'320 <small>kWh/Jahr</small></strong></div><div class="lead-detail"><span id="system-size">10.32 kWp · 24 Module</span><span>Rechenbeispiel, keine Ertragsgarantie</span></div></div>
-        <div class="metrics" aria-label="Wichtige Kennzahlen"><div class="metric"><span>Eigenverbrauch</span><strong id="self-use">3'612 kWh</strong><small id="self-share">35 % der Produktion</small></div><div class="metric"><span>Autarkie</span><strong id="autarky">80 %</strong><small>des Haushaltsbedarfs</small></div><div class="metric"><span>Jahresnutzen</span><strong id="benefit">CHF 1'477</strong><small>nach Betriebskosten</small></div><div class="metric"><span>Einfache Amortisation</span><strong id="payback">16.4 Jahre</strong><small>ohne Finanzierung</small></div></div>
-        <div class="visual-grid">
-          <section class="visual-section production" aria-labelledby="production-title"><div class="visual-heading"><div><h3 id="production-title">Produktion übers Jahr</h3><p>Monatliche Beispielverteilung · kWh</p></div><span class="legend"><i></i> Solarstrom</span></div><div class="chart" id="monthly-chart" role="img" aria-label="Balkendiagramm der monatlichen Solarproduktion"></div></section>
-          <section class="visual-section roof-section" aria-labelledby="roof-title"><div class="visual-heading"><div><h3 id="roof-title">Schematische Belegung</h3><p>Keine amtliche Dachgeometrie</p></div></div><div class="roof-plan" id="roof-plan" role="img" aria-label="Schematische Darstellung der Solarmodule auf dem Dach"></div><div class="roof-caption"><span id="roof-module-count">24 Module</span><span>Ansicht nicht massstäblich</span></div></section>
-        </div>
-        <section class="energy-section" aria-labelledby="energy-title"><div class="visual-heading"><div><h3 id="energy-title">So verteilt sich die Energie</h3><p>Jahresbilanz als vereinfachtes Modell</p></div></div><div class="energy-flow">
-          <div class="flow-row"><span class="flow-label">Solarproduktion</span><div class="flow-track"><span class="flow-self" id="solar-self-bar"></span><span class="flow-export" id="solar-export-bar"></span></div><strong id="solar-total">10'320 kWh</strong></div>
-          <div class="flow-legend"><span><i class="swatch self"></i>Im Haus genutzt <b id="flow-self">3'612 kWh</b></span><span><i class="swatch export"></i>Eingespeist <b id="flow-export">6'708 kWh</b></span></div>
-          <div class="flow-row demand-row"><span class="flow-label">Haushaltsbedarf</span><div class="flow-track"><span class="flow-covered" id="demand-covered-bar"></span><span class="flow-grid" id="demand-grid-bar"></span></div><strong id="demand-total">4'500 kWh</strong></div>
-          <div class="flow-legend"><span><i class="swatch self"></i>Solar gedeckt <b id="demand-self">3'612 kWh</b></span><span><i class="swatch grid"></i>Netzbezug <b id="grid-use">888 kWh</b></span></div>
-        </div></section>
-        <section class="comparison-section" aria-labelledby="comparison-title"><div class="visual-heading"><div><h3 id="comparison-title">Kennzahlen auf einen Blick</h3><p>Abhängig von den gewählten Annahmen</p></div></div><div class="data-table-wrap"><table><thead><tr><th>Grösse</th><th>Beispielwert</th><th>Einordnung</th></tr></thead><tbody>
-          <tr><th>Systemleistung</th><td id="table-kwp">10.32 kWp</td><td>24 Module à 430 Wp</td></tr><tr><th>Investition</th><td id="investment">CHF 24'400</td><td>Modellannahme, keine Offerte</td></tr><tr><th>Netzbezug</th><td id="table-grid">888 kWh/Jahr</td><td>nach Eigenverbrauch</td></tr><tr><th>Einspeisung</th><td id="table-export">6'708 kWh/Jahr</td><td>Überschussproduktion</td></tr>
-        </tbody></table></div></section>
-        <footer class="report-foot"><span>SimSolarPlaner · GitHub-Testseite</span><span>Keine Echtzeit- oder Behördenauskunft</span></footer>
-      </section>
-    </div>
+  <main>
+    <iframe title="Vollständige SimSolarPlaner-Anwendung" src="https://simsolarplaner.workspace-vo-9782.chatgpt.site/" allow="geolocation" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <noscript><p>Zum Verwenden des SimSolarPlaners JavaScript aktivieren oder <a href="https://simsolarplaner.workspace-vo-9782.chatgpt.site/">die Anwendung direkt öffnen</a>.</p></noscript>
   </main>
 </body>
 </html>
